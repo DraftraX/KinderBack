@@ -17,7 +17,7 @@ class Usuario(models.Model):
 
 
 class Modulo(models.Model):
-    nombre = models.CharField(max_length=100)  # Reducido el tamaño a 100 caracteres
+    nombre = models.CharField(max_length=100)  
     segmento = models.CharField(max_length=100, null=True, blank=True)
     url = models.URLField(max_length=255, null=True, blank=True)
     estado = models.IntegerField(default=1)

@@ -1,35 +1,19 @@
-from django.shortcuts import render
-# from rest_framework import viewsets
-from rest_framework.viewsets import ModelViewSet
-from rest_framework.permissions import IsAuthenticated, AllowAny
-from .serializers import *
-from .models import *
-from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework import viewsets
+from .models import Usuario, Modulo, Perfil, Acceso
+from .serializers import UsuarioSerializer, ModuloSerializer, PerfilSerializer, AccesoSerializer
 
-
-
-@api_view(['POST'])
-def login (request):
-    return Response({})
-
-@api_view(['POST'])
-def register(request):
-    return Response({})
-
-@api_view(['POST'])
-def profile(request):
-    return Response({})
-
-# class UsuarioView(viewsets.ModelViewSet):
-#     serializers_class = UsuarioSerializer
-#     queryset = Usuario.objects.all()
-class UsuarioViewSet(ModelViewSet):
+class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = Usuario.objects.all()
-    permission_classes = [
-        AllowAny
-    ]
     serializer_class = UsuarioSerializer
 
+class ModuloViewSet(viewsets.ModelViewSet):
+    queryset = Modulo.objects.all()
+    serializer_class = ModuloSerializer
 
-# Create your views here.
+class PerfilViewSet(viewsets.ModelViewSet):
+    queryset = Perfil.objects.all()
+    serializer_class = PerfilSerializer
+
+class AccesoViewSet(viewsets.ModelViewSet):
+    queryset = Acceso.objects.all()
+    serializer_class = AccesoSerializer
