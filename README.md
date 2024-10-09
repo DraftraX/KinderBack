@@ -1,3 +1,6 @@
+# kinderBack
+Este repositorio contiene el backend del sistema de gestión para instituciones de educación inicial (Kinder)
+
 Sistema Kinder - Backend
 Este repositorio contiene el backend del sistema de gestión para instituciones de educación inicial (Kinder). El proyecto está diseñado para facilitar la administración de las actividades diarias, incluyendo la gestión de estudiantes, maestros, clases, asistencia y comunicaciones con los padres. El backend proporciona una API robusta que se conecta con el frontend y maneja la lógica de negocio y la persistencia de datos.
 
